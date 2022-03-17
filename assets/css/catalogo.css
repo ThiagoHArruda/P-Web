@@ -1,0 +1,134 @@
+.catalogo {
+    padding-bottom: 24px;
+}
+
+#primeiro-catalogo {
+    padding-top: 24px;
+}
+
+.catalogo__texto {
+    font-family: 'amazon';
+    font-size: 19px;
+    color: rgb(242, 244, 246, .9);
+    padding-left: 48px;
+    padding-bottom: 8px;
+}
+
+
+/*vou tirar depois com js*/
+
+.catalogo__carrocel {
+    position: relative;
+    overflow: hidden;
+    transition: linear 1s;
+}
+
+.girarCarrocel {
+    margin-left: -300px;
+}
+
+.catalogo__carrocel-lista {
+    width: 2000px;
+    height: 200px;
+}
+
+.catalogo__carrocel-caixa {
+    display: inline-block;
+    padding-right: 8px;
+    width: 22vw;
+    transition: 70ms;
+}
+
+.catalogo__carrocel-filme {
+    width: 100%;
+    height: calc(23vw*(50/89));
+    /*Por mais incrível q pareça, as proporções são 89/50, widht em 23% é aproximadamente 23vw */
+}
+
+@media screen and (max-width: 1200px) {
+    .catalogo .catalogo__carrocel .catalogo__carrocel-caixa:nth-child(4) {
+        display: none;
+    }
+    .catalogo__carrocel-caixa {
+        width: 30%;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(30vw*(50/89));
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .catalogo .catalogo__carrocel .catalogo__carrocel-caixa:nth-child(3) {
+        display: none;
+    }
+    .catalogo__carrocel-caixa {
+        width: 43%;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(43vw*(50/89));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .catalogo .catalogo__carrocel .catalogo__carrocel-caixa:nth-child(2) {
+        display: none;
+    }
+    .catalogo__carrocel-caixa {
+        width: 80%;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(70vw*(50/89));
+    }
+}
+
+.catalogo__carrocel-caixa:hover {
+    transform: scale(1.1);
+}
+
+.catalogo .catalogo__carrocel .catalogo__carrocel-caixa:first-child {
+    padding-left: 50px;
+}
+
+.catalogo__carrocel-botaoDireito {
+    position: absolute;
+    margin-left: 15px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(../img/setaDireita.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(15, 23, 30, .5);
+    background-position: center;
+    border: none;
+    height: calc(23vw*(50/89));
+    width: 30px;
+    transition: opacity .25s ease, background-color .25s ease;
+}
+
+.catalogo__carrocel-botaoEsquerdo {
+    position: absolute;
+    margin-left: 15px;
+    top: 0;
+    left: -300px;
+    z-index: 1;
+    background-image: url(../img/setaEsquerda.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(15, 23, 30, .5);
+    background-position: center;
+    border: none;
+    height: calc(23vw*(50/89));
+    width: 30px;
+    transition: .25;
+    display: flex;
+}
+
+.catalogo__carrocel-botaoEsquerdo--ativo {
+    left: 300px;
+}
+
+.catalogo__carrocel-botaoDireito:hover,
+.catalogo__carrocel-botaoEsquerdo:hover {
+    background-color: rgba(15, 23, 30, .7);
+}

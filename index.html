@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Video</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/catalogo.css">
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="assets/img/logo.png" alt="Logo Prime Video" class="cabecalho__logo">
+            <nav class="cabecalho__menu">
+                <ul class="cabecalho__menu-ul">
+                    <li class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Início</a></li>
+                    <li class="cabecalho__menu-lista"><a href="" class="cabecalho__menu-texto">Loja</a></li>
+                    <li class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Canais</a></li>
+                    <li class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Categorias</a></li>
+                    <li class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Minha Área</a></li>
+                    <li id="cabecalho__menu-explorar" class="cabecalho__menu-lista"><a href="#" class="cabecalho__menu-texto">Explorar</a></li>
+                </ul>
+            </nav>
+            <div class="cabecalho__pesquisa">
+                <button class="cabecalho__pesquisa-btn">
+                    <img src="assets/img/lupa.png" alt="Icone Pesquisa" class="cabecalho__pesquisa-img">
+                </button>
+            </div>
+            <div class="cabecalho__profile">
+                <img src="assets/img/perfil.png" alt="Foto Perfil" class="cabecalho__profile-img">
+                <a class="cabecalho__profile-usuario" href="#" alt="Nome do Usuario">Thiago</a>
+            </div>
+
+        </div>
+
+    </header>
+    <main>
+        <section class="banner">
+            <img src="assets/img/banner.jpg" alt="Banner" class="banner__img">
+            <button class="catalogo__banner-botao"></button>
+        </section>
+        <section class="catalogo" id='primeiro-catalogo'>
+            <h1 class="catalogo__texto">Continuar Assistindo</h1>
+            <div class="catalogo__carrocel">
+                <button class="catalogo__carrocel-botaoEsquerdo" onclick="moveCarrocelEsquerda(this)"></button>
+                <ul class="catalogo__carrocel-lista">
+                    <li class="catalogo__carrocel-caixa"> <img src="assets/img/filme1.jpg" alt="x-men: apocalipse" class="catalogo__carrocel-filme"></li>
+                    <li class="catalogo__carrocel-caixa"> <img src="assets/img/filme2.jpg" alt="Sherlock Holmes" class="catalogo__carrocel-filme"></li>
+                    <li class="catalogo__carrocel-caixa"><img src="assets/img/filme3.jpg" alt="Prometheus" class="catalogo__carrocel-filme"></li>
+                    <li class="catalogo__carrocel-caixa"><img src="assets/img/filme4.jpg" alt="Aladin Live Action" class="catalogo__carrocel-filme"></li>
+                    <li class="catalogo__carrocel-caixa"><img src="assets/img/filme9.jpg" alt="Aladin Live Action" class="catalogo__carrocel-filme"></li>
+                    <li class="catalogo__carrocel-caixa"><img src="assets/img/filme10.jpg" alt="Aladin Live Action" class="catalogo__carrocel-filme"></li>
+                </ul>
+                <button class="catalogo__carrocel-botaoDireito" onclick="moveCarrocelDireita(this)"></button>
+            </div>
+        </section>
+        <section class=" catalogo ">
+            <h1 class="catalogo__texto ">Favoritos</h1>
+            <div class="catalogo__carrocel ">
+                <button class="catalogo__carrocel-botaoEsquerdo" onclick="moveCarrocelEsquerda(this)"></button>
+
+                <ul class="catalogo__carrocel-lista ">
+                    <li class="catalogo__carrocel-caixa "> <img src="assets/img/filme5.jpg " alt="Prometheus " class="catalogo__carrocel-filme "></li>
+                    <li class="catalogo__carrocel-caixa "> <img src="assets/img/filme6.jpg " alt="x-men: dias de um futuro perdido " class="catalogo__carrocel-filme "></li>
+                    <li class="catalogo__carrocel-caixa "><img src="assets/img/filme7.jpg " alt="? " class="catalogo__carrocel-filme "></li>
+                    <li class="catalogo__carrocel-caixa "><img src="assets/img/filme8.jpg " alt="O Condenado " class="catalogo__carrocel-filme "></li>
+                    <li class="catalogo__carrocel-caixa "><img src="assets/img/filme2.jpg " alt="O Condenado " class="catalogo__carrocel-filme "></li>
+                    <li class="catalogo__carrocel-caixa "><img src="assets/img/filme11.jpg " alt="O Condenado " class="catalogo__carrocel-filme "></li>
+
+                </ul>
+                <button class="catalogo__carrocel-botaoDireito" onclick="moveCarrocelDireita(this)"></button>
+            </div>
+        </section>
+
+    </main>
+    <script src="assets/js/moveCarrocel.js "></script>
+
+</body>
+
+</html>

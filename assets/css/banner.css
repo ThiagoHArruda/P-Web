@@ -1,0 +1,28 @@
+.banner {
+    background-color: black;
+    text-align: center;
+    position: relative;
+}
+
+.catalogo__banner-botao {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(../img/setaDireita.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    height: 100%;
+    width: 30px;
+    transition: opacity .25s ease, background-color .25s ease;
+}
+
+.banner__img {
+    height: calc(100vw/5);
+    /*No codigo fonte do banner do Prime, as imagens são dimencionadas em 5:1, onde 5 é a tela do monito completa e 1 a altura*/
+    width: 70vw;
+    /*Como é difícil achar um banner widescreen. optei por deixar menor a  largura a fim de não danificar a imagem*/
+}
