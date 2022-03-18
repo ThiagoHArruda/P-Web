@@ -1,0 +1,60 @@
+.lista1 li:nth-child(1) div {
+    background-image: url(../img/filmes/caixa1.jpg);
+    background-size: cover;
+    object-fit: fill
+}
+
+.lista1 li:nth-child(2) div {
+    background-image: url(../img/filmes/caixa2.jpg);
+    background-size: cover;
+}
+
+.lista1 li:nth-child(3) div {
+    background-image: url(../img/filmes/caixa3.jpg);
+    background-size: cover;
+}
+
+.lista1 li:nth-child(4) div {
+    background-image: url(../img/filmes/caixa4.jpg);
+    background-size: cover;
+}
+
+.lista1 li:nth-child(5) div {
+    background-image: url(../img/filmes/caixa5.jpg);
+    background-size: cover;
+}
+
+.lista1 li:nth-child(6) div {
+    background-image: url(../img/filmes/caixa6.jpg);
+    background-size: cover;
+}
+
+.lista2 li:nth-child(1) div {
+    background-image: url(../img/filmes/caixa7.jpg);
+    background-size: cover;
+}
+
+.lista2 li:nth-child(2) div {
+    background-image: url(../img/filmes/caixa8.jpg);
+    background-size: cover;
+}
+
+.lista2 li:nth-child(3) div {
+    background-image: url(../img/filmes/caixa9.jpg);
+    background-size: cover;
+}
+
+.lista2 li:nth-child(4) div {
+    background-image: url(../img/filmes/caixa10.jpg);
+    background-size: cover;
+}
+
+.lista2 li:nth-child(5) div {
+    background-image: url(../img/filmes/caixa11.jpg);
+    background-size: cover;
+}
+
+.lista2 li:nth-child(6) div {
+    background-image: url(../img/filmes/caixa12.jpg);
+    background-size: cover;
+}

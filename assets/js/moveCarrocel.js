@@ -1,25 +1,22 @@
 function moveCarrocelDireita(element) {
-    const parent = element.parentNode
-    const velho = parent.children
-    console.log(element);
-    console.log(parent);
-    console.log(velho[0]);
-    parent.classList.add('girarCarrocel')
+    const irmao = element.parentNode.children
+    const filho = irmao[1].children
+    console.log(filho);
+    irmao[0].classList.add('catalogo__carrocel-botaoEsquerdo--ativo')
+    irmao[1].children.style.transform = "translateX(10%)"
+
     setTimeout(function() {
 
-        velho[0].classList.add('catalogo__carrocel-botaoEsquerdo--ativo')
-    }, 750);
-
+    }, 100);
+    //tranform translate
 };
 
 
 
 function moveCarrocelEsquerda(element) {
-    const parent = element.parentNode
-    const velho = parent.children
-    console.log(element);
-    console.log(parent);
-    parent.classList.remove('girarCarrocel')
-    velho[0].classList.remove('catalogo__carrocel-botaoEsquerdo--ativo')
+    const irmao = element.parentNode.children
+    const filho = irmao[1].children
+    irmao[0].style.transform = 'translateX(10%)'
+    irmao[0].classList.remove('catalogo__carrocel-botaoEsquerdo--ativo')
 
 }

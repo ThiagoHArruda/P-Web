@@ -14,79 +14,33 @@
     padding-bottom: 8px;
 }
 
-
-/*vou tirar depois com js*/
-
 .catalogo__carrocel {
-    position: relative;
     overflow: hidden;
     transition: linear 1s;
 }
 
-.girarCarrocel {
-    margin-left: -300px;
-}
-
 .catalogo__carrocel-lista {
     width: 2000px;
-    height: 200px;
+}
+
+.catalogo div {
+    position: relative;
 }
 
 .catalogo__carrocel-caixa {
     display: inline-block;
     padding-right: 8px;
-    width: 22vw;
+    border-right: -1px;
+    width: 22.62vw;
+    height: 165.5px;
     transition: 70ms;
 }
 
 .catalogo__carrocel-filme {
     width: 100%;
-    height: calc(23vw*(50/89));
-    /*Por mais incrível q pareça, as proporções são 89/50, widht em 23% é aproximadamente 23vw */
-}
-
-@media screen and (max-width: 1200px) {
-    .catalogo .catalogo__carrocel .catalogo__carrocel-caixa:nth-child(4) {
-        display: none;
-    }
-    .catalogo__carrocel-caixa {
-        width: 30%;
-    }
-    .catalogo__carrocel-filme {
-        height: calc(30vw*(50/89));
-    }
-}
-
-@media screen and (max-width: 840px) {
-    .catalogo .catalogo__carrocel .catalogo__carrocel-caixa:nth-child(3) {
-        display: none;
-    }
-    .catalogo__carrocel-caixa {
-        width: 43%;
-    }
-    .catalogo__carrocel-filme {
-        height: calc(43vw*(50/89));
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .catalogo .catalogo__carrocel .catalogo__carrocel-caixa:nth-child(2) {
-        display: none;
-    }
-    .catalogo__carrocel-caixa {
-        width: 80%;
-    }
-    .catalogo__carrocel-filme {
-        height: calc(70vw*(50/89));
-    }
-}
-
-.catalogo__carrocel-caixa:hover {
-    transform: scale(1.1);
-}
-
-.catalogo .catalogo__carrocel .catalogo__carrocel-caixa:first-child {
-    padding-left: 50px;
+    height: calc(22vw*(50/89));
+    position: relative;
+    z-index: 900;
 }
 
 .catalogo__carrocel-botaoDireito {
@@ -94,8 +48,8 @@
     margin-left: 15px;
     top: 0;
     right: 0;
-    z-index: 1;
-    background-image: url(../img/setaDireita.png);
+    z-index: 900;
+    background-image: url(../img/icons/setaDireita.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: rgba(15, 23, 30, .5);
@@ -110,9 +64,9 @@
     position: absolute;
     margin-left: 15px;
     top: 0;
-    left: -300px;
-    z-index: 1;
-    background-image: url(../img/setaEsquerda.png);
+    left: 0;
+    z-index: 900;
+    background-image: url(../img/icons/setaEsquerda.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: rgba(15, 23, 30, .5);
@@ -121,14 +75,71 @@
     height: calc(23vw*(50/89));
     width: 30px;
     transition: .25;
-    display: flex;
+    display: none;
 }
 
 .catalogo__carrocel-botaoEsquerdo--ativo {
-    left: 300px;
+    display: initial;
+}
+
+.catalogo__carrocel-filme:hover {
+    transform: scale(1.05);
+    z-index: 900;
+}
+
+.catalogo .catalogo__carrocel .catalogo__carrocel-caixa:first-child {
+    padding-left: 50px;
 }
 
 .catalogo__carrocel-botaoDireito:hover,
 .catalogo__carrocel-botaoEsquerdo:hover {
     background-color: rgba(15, 23, 30, .7);
+}
+
+@media screen and (max-width: 1200px) {
+    .catalogo__carrocel-caixa {
+        width: 30vw;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(30vw*(50/89));
+    }
+    .catalogo__carrocel-lista {
+        width: 3000px;
+        height: calc(30vw*(50/89));
+        ;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .catalogo__carrocel-caixa {
+        width: 43vw;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(43vw*(50/89));
+    }
+    .catalogo__carrocel-lista {
+        width: 3000px;
+        height: calc(43vw*(50/89));
+    }
+    .catalogo__carrocel-botaoEsquerdo,
+    .catalogo__carrocel-botaoDireito {
+        height: calc(43vw*(50/89));
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .catalogo__carrocel-caixa {
+        width: 70vw;
+    }
+    .catalogo__carrocel-filme {
+        height: calc(70vw*(50/89));
+    }
+    .catalogo__carrocel-lista {
+        width: 3000px;
+        height: calc(70vw*(50/89));
+    }
+    .catalogo__carrocel-botaoEsquerdo,
+    .catalogo__carrocel-botaoDireito {
+        visibility: hidden;
+    }
 }
